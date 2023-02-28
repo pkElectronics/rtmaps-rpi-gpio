@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ComponentResources xmlns="http://schemas.intempora.com/RTMaps/2011/ComponentResources" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RPIGpioOutputComponent" xsi:noNamespaceSchemaLocation="http://www.intempora.com/schemas/RTMaps/2011/ComponentResources.xsd">
+<Type>Component</Type>
+<IconFile>rpi.png</IconFile>
+<TargetOS>Linux</TargetOS>
+<Lang lang="ENG">
+<GroupName>Robotics</GroupName>
+<Documentation>
+<Component>
+<Alias>RPIGpioOutputComponent</Alias>
+<Description>
+<span><![CDATA[<p>
+Output Component for the Raspberry Pi GPIO
+</p>
+<p>
+Uses the Broadcom based Numbering scheme as commonly documented. For further reading, visit https://pinout.xyz/
+</p>]]></span>
+</Description>
+</Component>
+<Property MAPSName="GPIO">
+<Alias>GPIO</Alias>
+<Description>
+<span><![CDATA[GPIO Pin Number]]></span>
+</Description>
+</Property>
+<Input MAPSName="input_value">
+<Alias>input_value</Alias>
+<Description>
+<span><![CDATA[Desired Value of the Output Pin]]></span>
+</Description>
+</Input>
+</Documentation>
+</Lang>
+</ComponentResources>

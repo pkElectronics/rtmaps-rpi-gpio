@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ComponentResources xmlns="http://schemas.intempora.com/RTMaps/2011/ComponentResources" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RPIGpioPWMComponent" xsi:noNamespaceSchemaLocation="http://www.intempora.com/schemas/RTMaps/2011/ComponentResources.xsd">
+<Type>Component</Type>
+<IconFile>rpi.png</IconFile>
+<TargetOS>Linux</TargetOS>
+<Lang lang="ENG">
+<GroupName>Robotics</GroupName>
+<Documentation>
+<Component>
+<Alias>RPIGpioPWMComponent</Alias>
+<Description>
+<span><![CDATA[<p>
+Hardware PWM Output Component for Raspberry Pi based System</p>
+<p>
+Requires the hardware pwm kernel overlay to be loaded and properly configured
+</p>
+<p>
+Enabling the Kernel driver requires adding the corresponding dtoverlay to the /boot/config.txt file.
+</p>
+<p>Example: dtoverlay=pwm-2chan,pin=12,func=4,pin2=13,func2=4</p>
+<p>This enables the pwm driver for pins 12 and 13, for further reading see: https://github.com/dotnet/iot/blob/main/Documentation/raspi-pwm.md#enabling-hardware-pwm</p>]]></span>
+</Description>
+</Component>
+<Property MAPSName="PWMChannel">
+<Alias>PWMChannel</Alias>
+<Description>
+<span><![CDATA[PWM Channel as configured in the kerneldriver]]></span>
+</Description>
+</Property>
+<Property MAPSName="PWMPolarity">
+<Alias>PWMPolarity</Alias>
+<Description>
+<span><![CDATA[Invert PWM signal if necessary]]></span>
+</Description>
+</Property>
+<Input MAPSName="period">
+<Alias>period</Alias>
+<Description>
+<span><![CDATA[PWM Period in nanoseconds]]></span>
+</Description>
+</Input>
+<Input MAPSName="dutycycle">
+<Alias>dutycycle</Alias>
+<Description>
+<span><![CDATA[PWM dutycycle in percent]]></span>
+</Description>
+</Input>
+</Documentation>
+</Lang>
+</ComponentResources>

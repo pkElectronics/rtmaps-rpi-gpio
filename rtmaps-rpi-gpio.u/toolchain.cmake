@@ -1,0 +1,11 @@
+SET(CMAKE_SYSTEM_NAME Linux)
+SET(VISUALGDB_TOOLCHAIN_TYPE Linux)
+SET(VISUALGDB_TOOLCHAIN_SUBTYPE GCC)
+SET(CMAKE_C_COMPILER "$ENV{TOOLCHAIN_ROOT}/bin/aarch64-linux-gnu-gcc.exe")
+SET(CMAKE_CXX_COMPILER "$ENV{TOOLCHAIN_ROOT}/bin/aarch64-linux-gnu-g++.exe")
+SET(CMAKE_ASM_COMPILER "$ENV{TOOLCHAIN_ROOT}/bin/aarch64-linux-gnu-g++.exe")
+SET(CMAKE_SYSROOT "$ENV{TOOLCHAIN_ROOT}/aarch64-linux-gnu/sysroot")
+
+if(EXISTS "$ENV{TOOLCHAIN_ROOT}/Qt/v5-CMake/Qt5Cross.cmake")
+	include("$ENV{TOOLCHAIN_ROOT}/Qt/v5-CMake/Qt5Cross.cmake")
+endif()
